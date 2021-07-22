@@ -5,6 +5,8 @@
 --color-primary-light: #FF3366;
 --color-primary-dark: #BA265D;
 
+--color-white: #fff;
+
 --color-grey-1: #faf9f9;
 --color-grey-2: #f4f2f2;
 --color-grey-3: #f0eeee;
@@ -12,6 +14,8 @@
 --color-grey-5: #999;
 --color-grey-6: #777;
 --color-grey-7: #333;
+
+--color-black: #000;
 
 --line: 1px solid var(--color-grey-light-2);
 
@@ -38,9 +42,11 @@ html{
 }
 
 body{
-    font-family: "Open Sans",sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     background-image: linear-gradient(to right bottom,var(--color-primary-light),var(--color-primary-dark));
     min-height: 100vh;
+    color: var(--color-grey-6);
+    line-height: 1.6;
 }
 

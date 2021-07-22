@@ -4,11 +4,15 @@
 .container{
     max-width: 120rem;
     margin: 8rem auto;
+    background-color: var(--color-white);
 }
 
 .header{
-    height: 4rem;    //test
-    background-color: khaki;    //test
+    font-size: 1.4rem;
+    height: 7rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .content{
