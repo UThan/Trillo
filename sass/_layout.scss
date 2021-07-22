@@ -1,0 +1,30 @@
+/////////////////////////////////////////////////////////////////////////
+////////////////layout
+
+.container{
+    max-width: 120rem;
+    margin: 8rem auto;
+}
+
+.header{
+    height: 4rem;    //test
+    background-color: khaki;    //test
+}
+
+.content{
+    height: 52rem;   //test
+    background-color: wheat;    //test
+    display: flex;
+}
+
+.sidebar{
+    height: 50rem;   //test
+    background-color: gray;    //test
+    flex: 0 0 18%;
+}
+
+.hotelview{
+    height: 50rem;   //test
+    background-color: orangered;    //test
+    flex: 1;
+}
