@@ -16,22 +16,40 @@
     border-bottom: var(--line);
 }
 
-.content{
-    height: 52rem;   //test
-    background-color: wheat;    //test
+.content{    
     display: flex;
 }
 
 .sidebar{
-    height: 50rem;   //test
-    background-color: var(--color-grey-7);    //test
+    background-color: var(--color-grey-7);    
     flex: 0 0 18%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.hotelview{
-    height: 50rem;   //test
+.hotelview{   
+    flex: 1;    
+    font-size: 1.4rem;
+}
+
+.detail{    
+    background-color: var(--color-grey-1);
+    padding: 4.5rem;
+    display: flex;
+}
+
+.description{
+    flex: 0 0 60%;
+    margin-right: 4.5rem;
+    background-color: var(--color-white);
+    padding: 3rem;
+}
+
+.userreviews{
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 }

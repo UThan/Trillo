@@ -64,15 +64,12 @@ body {
 }
 
 .content {
-  height: 52rem;
-  background-color: wheat;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
 .sidebar {
-  height: 50rem;
   background-color: var(--color-grey-7);
   -webkit-box-flex: 0;
       -ms-flex: 0 0 18%;
@@ -90,10 +87,43 @@ body {
 }
 
 .hotelview {
-  height: 50rem;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  font-size: 1.4rem;
+}
+
+.detail {
+  background-color: var(--color-grey-1);
+  padding: 4.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.description {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 60%;
+          flex: 0 0 60%;
+  margin-right: 4.5rem;
+  background-color: var(--color-white);
+  padding: 3rem;
+}
+
+.userreviews {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .logo__img {
@@ -319,7 +349,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: var(--color-grey-1);
 }
 
 .overview__heading {
@@ -391,6 +420,16 @@ body {
   cursor: pointer;
 }
 
+.btn--inline span {
+  margin-left: 3px;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.btn--inline:hover span {
+  margin-left: 8px;
+}
+
 .btn--inline:focus {
   -webkit-animation: wavey 1s infinite;
           animation: wavey 1s infinite;
@@ -430,5 +469,133 @@ body {
             transform: scale(1);
     color: var(--color-primary-dark);
   }
+}
+
+.paragraph:not(:last-of-type) {
+  margin-bottom: 2rem;
+}
+
+.list {
+  margin: 3rem 0;
+  padding: 3rem 0;
+  border-top: var(--line);
+  border-bottom: var(--line);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  list-style: none;
+}
+
+.list__item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+}
+
+.list__item::before {
+  content: '';
+  display: inline-block;
+  height: 1.2rem;
+  width: 1.2rem;
+  background-color: var(--color-primary);
+  -webkit-mask-image: url(../img/chevron-thin-right.svg);
+          mask-image: url(../img/chevron-thin-right.svg);
+  -webkit-mask-size: cover;
+          mask-size: cover;
+  margin-right: .6rem;
+}
+
+.recommend {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.recommend__count {
+  font-size: 1.3rem;
+  margin-right: auto;
+  color: var(--color-grey-6);
+}
+
+.recommend__friends-img {
+  width: 4rem;
+  height: 4rem;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  border-radius: 50%;
+  border: 3px solid var(--color-white);
+  margin-right: -1.5rem;
+}
+
+.review {
+  padding: 3rem;
+  background-color: var(--color-white);
+  -webkit-box-shadow: var(--shadow-light);
+          box-shadow: var(--shadow-light);
+  position: relative;
+}
+
+.review:not(:last-child) {
+  margin-bottom: 4.5rem;
+}
+
+.review__text {
+  z-index: 2;
+}
+
+.review__user {
+  margin-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.review__userphoto {
+  height: 4.5rem;
+  width: 4.5rem;
+  border-radius: 50%;
+  margin-right: 1.5rem;
+}
+
+.review__userbox {
+  margin-right: auto;
+}
+
+.review__username {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: .4rem;
+}
+
+.review__date {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.review__rating {
+  font-size: 2.2rem;
+  font-weight: 300;
+  color: var(--color-primary);
+}
+
+.review::before {
+  content: "\201C";
+  display: inline-block;
+  position: absolute;
+  font-family: sans-serif;
+  font-size: 16rem;
+  top: -1rem;
+  left: 0;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.1);
 }
 /*# sourceMappingURL=main.css.map */

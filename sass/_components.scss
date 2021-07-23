@@ -197,7 +197,6 @@
 .overview{
     display: flex;
     align-items: center;
-    background-color: var(--color-grey-1);
 
     &__heading{        
         font-weight: 300;
@@ -260,7 +259,16 @@
         margin-bottom: 2px;
         background-color: transparent;
         border-bottom: 1px solid currentColor;
-        cursor: pointer;
+        cursor: pointer;        
+
+        span{
+            margin-left: 3px;
+            transition: all .2s;
+        }
+
+        &:hover span{
+            margin-left: 8px;
+        }
 
 
         &:focus{
@@ -284,5 +292,136 @@
     100%{
         transform: scale(1);
         color: var(--color-primary-dark);
+    }
+}
+
+/////////////////////////////////////////////////////////////////////////
+////////////////paragraph
+
+.paragraph{
+    &:not(:last-of-type){
+        margin-bottom: 2rem;
+    }
+}
+
+/////////////////////////////////////////////////////////////////////////
+////////////////list
+
+.list{
+    margin: 3rem 0;
+    padding: 3rem 0;
+    border-top: var(--line);
+    border-bottom: var(--line);
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+
+    &__item{
+        flex: 0 0 50%;
+
+        &::before{
+            content: '';
+            display: inline-block;
+            height: 1.2rem;
+            width: 1.2rem;
+            background-color: var(--color-primary);
+            mask-image: url(../img/chevron-thin-right.svg);
+            mask-size: cover;
+            margin-right: .6rem;
+        }
+    }
+}
+
+
+/////////////////////////////////////////////////////////////////////////
+////////////////recommend
+
+.recommend{
+    display: flex;
+    align-items: center;
+
+    &__count{
+        font-size: 1.3rem;
+        margin-right: auto;
+        color: var(--color-grey-6);
+    }
+
+    &__friends{
+
+        &-img{
+            width: 4rem;
+            height: 4rem;
+            box-sizing: content-box;
+            border-radius: 50%;
+            border: 3px solid var(--color-white);
+            margin-right: -1.5rem;
+        }
+        
+    }
+}
+
+/////////////////////////////////////////////////////////////////////////
+////////////////User review
+
+.review{
+
+    padding: 3rem;    
+    background-color: var(--color-white);
+    box-shadow: var(--shadow-light);
+    position: relative;
+    &:not(:last-child){
+        margin-bottom: 4.5rem;
+    }
+
+
+    &__text{
+        z-index: 2;
+    }
+   
+    &__user{
+        margin-top: 2rem;
+        display: flex;
+        align-items: center;
+    }
+
+    &__userphoto{
+        height: 4.5rem;
+        width: 4.5rem;
+        border-radius: 50%;
+        margin-right: 1.5rem;
+    }
+
+    &__userbox{
+        margin-right: auto;
+    }
+
+    &__username{
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-bottom: .4rem;
+    }
+
+    &__date{
+        font-size: 1rem;
+        font-weight: 300;
+    }
+
+    &__rating{
+        font-size: 2.2rem;
+        font-weight: 300;
+        color: var(--color-primary);
+    }
+
+    &::before{
+        content: "\201C";
+        display: inline-block;
+        position: absolute;
+        font-family: sans-serif;
+        font-size: 16rem;
+        top: -1rem;
+        left: 0;        
+        line-height: 1;
+        color: rgba(#000, 0.1);
     }
 }
