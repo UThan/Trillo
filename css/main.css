@@ -435,42 +435,6 @@ body {
           animation: wavey 1s infinite;
 }
 
-@-webkit-keyframes wavey {
-  0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    color: var(--color-primary-dark);
-  }
-  50% {
-    -webkit-transform: scale(1.05);
-            transform: scale(1.05);
-    color: var(--color-primary-light);
-  }
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    color: var(--color-primary-dark);
-  }
-}
-
-@keyframes wavey {
-  0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    color: var(--color-primary-dark);
-  }
-  50% {
-    -webkit-transform: scale(1.05);
-            transform: scale(1.05);
-    color: var(--color-primary-light);
-  }
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    color: var(--color-primary-dark);
-  }
-}
-
 .paragraph:not(:last-of-type) {
   margin-bottom: 2rem;
 }
@@ -597,5 +561,91 @@ body {
   left: 0;
   line-height: 1;
   color: rgba(0, 0, 0, 0.1);
+}
+
+.cta {
+  padding: 3.5rem 0;
+  text-align: center;
+}
+
+.cta__text {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.cta__button {
+  border: none;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(var(--color-primary-light)), to(var(--color-primary-dark)));
+  background-image: linear-gradient(to right bottom, var(--color-primary-light), var(--color-primary-dark));
+  padding: 2rem 7rem;
+  border-radius: 10rem;
+  font-size: 1.4rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: var(--color-white);
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.cta__button > * {
+  display: inline-block;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.cta__button-hide {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: -80px;
+  left: 0;
+}
+
+.cta__button:hover .cta__button-hide {
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+}
+
+.cta__button:hover .cta__button-show {
+  -webkit-transform: translateY(80px);
+          transform: translateY(80px);
+}
+
+.cta__button:focus {
+  -webkit-animation: wavey .5s infinite;
+          animation: wavey .5s infinite;
+}
+
+@-webkit-keyframes wavey {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes wavey {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
 }
 /*# sourceMappingURL=main.css.map */
